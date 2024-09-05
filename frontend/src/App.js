@@ -21,7 +21,9 @@ const App = () => {
   const [winner, setWinner] = useState(null);
 
   useEffect(() => {
-    const socket = new WebSocket("ws://192.168.1.218:5173");
+    const socket = new WebSocket(
+      "ws://" + window.location.hostname + ":" + window.location.port
+    );
 
     socket.onopen = () => {
       setMessage("Connected to server. Waiting for an opponent...");
@@ -104,9 +106,10 @@ const App = () => {
 
   return (
     <div>
+      <h1>TicTacToe multiplayer Game !</h1>
       <h2>{message}</h2>
       {turn && !winner && (
-        <h3>{turn == player ? `It's your turn` : `It's ${turn}'s turn`}</h3>
+        <h3>{turn === player ? `It's your turn` : `It's ${turn}'s turn`}</h3>
       )}
       <div className="board" style={{ display: "none" }}>
         {gameState.map((value, index) => (
@@ -115,6 +118,10 @@ const App = () => {
           </div>
         ))}
       </div>
+      <p className="footer">
+        a tiny project designed by{" "}
+        <a href="mailto:antoine.marchal@pm.me">Antoine Marchal</a>.
+      </p>
     </div>
   );
 };
