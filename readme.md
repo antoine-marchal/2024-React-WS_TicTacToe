@@ -47,9 +47,15 @@ This project is a simple Tic Tac Toe game with multiplayer functionality, design
 ### How to Play
 
 - Log in to the game.
-- If an opponent is available, you will be matched and the game will start.
+- If an opponent is available, you will be matched and the game will start.![](assets/20240905_063119_image.png)
 - If no opponent is available, you will be added to a waiting list.
+
+  ![](assets/20240905_063034_image.png)
+
 - The game ends when one player wins, or an opponent leaves.
+
+  ![](assets/20240905_063153_image.png)
+  ![](assets/20240905_063214_image.png)
 
 ### Contact
 
